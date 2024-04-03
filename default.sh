@@ -28,10 +28,11 @@ EXTENSIONS=(
     "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
     "https://github.com/fkunn1326/openpose-editor"
     "https://github.com/Gourieff/sd-webui-reactor"
+    "https://github.com/BlafKing/sd-civitai-browser-plus"
+    "https://github.com/Bing-su/adetailer"
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=full&fp=fp16"
     "https://civitai.com/api/download/models/130090?type=Model&format=SafeTensor&size=full&fp=fp16"
     "https://civitai.com/api/download/models/280025"
     "https://civitai.com/api/download/models/272376?type=Model&format=SafeTensor&size=pruned&fp=fp16"
@@ -39,6 +40,11 @@ CHECKPOINT_MODELS=(
 
 LORA_MODELS=(
     "https://civitai.com/api/download/models/171989?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/135867?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/155308?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/248345?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/237275?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/396447?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
