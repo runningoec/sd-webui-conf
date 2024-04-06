@@ -188,6 +188,7 @@ function provisioning_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }
 function provisioning_download_extras() { 
-    wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -P /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    mkdir -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
 }
 provisioning_start
