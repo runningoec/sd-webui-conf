@@ -19,19 +19,14 @@ PIP_PACKAGES=(
 
 EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
-    "https://github.com/d8ahazard/sd_dreambooth_extension"
-    "https://github.com/deforum-art/sd-webui-deforum"
     "https://github.com/adieyal/sd-dynamic-prompts"
-    "https://github.com/ototadana/sd-face-editor"
     "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser"
-    "https://github.com/hako-mikan/sd-webui-regional-prompter"
-    "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
-    "https://github.com/fkunn1326/openpose-editor"
     "https://github.com/Gourieff/sd-webui-reactor"
     "https://github.com/BlafKing/sd-civitai-browser-plus"
     "https://github.com/Bing-su/adetailer"
     "https://github.com/Uminosachi/sd-webui-inpaint-anything"
     "https://github.com/light-and-ray/sd-webui-replacer"
+    "https://github.com/continue-revolution/sd-webui-segment-anything"
 )
 
 CHECKPOINT_MODELS=(
@@ -80,7 +75,6 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
-
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -92,6 +86,7 @@ function provisioning_start() {
     provisioning_get_mamba_packages
     provisioning_get_pip_packages
     provisioning_get_extensions
+    provisioning_download_extras
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -192,5 +187,7 @@ function provisioning_print_end() {
 function provisioning_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }
-
+function provisioning_download_extras() { 
+    wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -P /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+}
 provisioning_start
