@@ -190,5 +190,6 @@ function provisioning_download() {
 function provisioning_download_extras() { 
     mkdir -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
     wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    wget https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
 }
 provisioning_start
