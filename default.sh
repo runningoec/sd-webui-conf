@@ -30,9 +30,9 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/130090?type=Model&format=SafeTensor&size=full&fp=fp16"
     "https://civitai.com/api/download/models/280025"
     "https://civitai.com/api/download/models/272376?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    "https://civitai.com/api/download/models/357609"
 )
 
 LORA_MODELS=(
@@ -189,7 +189,7 @@ function provisioning_download() {
 }
 function provisioning_download_extras() { 
     mkdir -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
-    wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
-    wget https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    wget https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    wget https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
 }
 provisioning_start
