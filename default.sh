@@ -30,6 +30,7 @@ EXTENSIONS=(
     "https://github.com/Gourieff/sd-webui-reactor"
     "https://github.com/BlafKing/sd-civitai-browser-plus"
     "https://github.com/Bing-su/adetailer"
+    "https://github.com/light-and-ray/sd-webui-replacer"
 )
 
 CHECKPOINT_MODELS=(
