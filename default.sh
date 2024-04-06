@@ -188,10 +188,10 @@ function provisioning_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }
 function provisioning_download_extras() { 
-    mkdir -p /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
-    wget "https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
-    wget "https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/
+    mkdir -p "/opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/"
+    wget "https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/ --content-disposition --show-progress
+    wget "https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/ --content-disposition --show-progress
     rm -rf /opt/stable-diffusion-webui/ui-config.json
-    wget "https://raw.githubusercontent.com/runningoec/sd-webui-conf/main/ui-config.json" -O /opt/stable-diffusion-webui/
+    wget "https://raw.githubusercontent.com/runningoec/sd-webui-conf/main/ui-config.json" -O /opt/stable-diffusion-webui/ --content-disposition --show-progress
 }
 provisioning_start
