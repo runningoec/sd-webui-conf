@@ -27,6 +27,7 @@ EXTENSIONS=(
     "https://github.com/Uminosachi/sd-webui-inpaint-anything"
     "https://github.com/light-and-ray/sd-webui-replacer"
     "https://github.com/continue-revolution/sd-webui-segment-anything"
+    "https://github.com/hako-mikan/sd-webui-regional-prompter"
 )
 
 CHECKPOINT_MODELS=(
