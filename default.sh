@@ -193,5 +193,7 @@ function provisioning_download_extras() {
     wget "https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/sam_hq_vit_h.pth --content-disposition --show-progress
     rm -rf /opt/stable-diffusion-webui/ui-config.json
     wget "https://raw.githubusercontent.com/runningoec/sd-webui-conf/main/ui-config.json" -O /opt/stable-diffusion-webui/ui-config.json --content-disposition --show-progress
+    mkdir -p "/opt/stable-diffusion-webui/embeddings"
+    wget "https://civitai.com/api/download/models/165424?type=Model&format=SafeTensor" -O /opt/stable-diffusion-webui/embeddings/ziprealism_neg.safetensors --content-disposition --show-progress
 }
 provisioning_start
