@@ -28,6 +28,8 @@ EXTENSIONS=(
     "https://github.com/light-and-ray/sd-webui-replacer"
     "https://github.com/continue-revolution/sd-webui-segment-anything"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
+    "https://github.com/ototadana/sd-face-editor"
+    "https://github.com/Physton/sd-webui-prompt-all-in-one"
 )
 
 CHECKPOINT_MODELS=(
