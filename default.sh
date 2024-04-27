@@ -30,6 +30,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/ototadana/sd-face-editor"
     "https://github.com/Physton/sd-webui-prompt-all-in-one"
+    "https://github.com/klimaleksus/stable-diffusion-webui-fix-image-paste"
 )
 
 CHECKPOINT_MODELS=(
