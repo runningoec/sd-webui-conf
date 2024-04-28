@@ -195,7 +195,7 @@ function provisioning_download() {
 function provisioning_download_extras() { 
     mkdir -p "/opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/"
     wget "https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/mobile_sam.pt --content-disposition --show-progress
-    wget "https://huggingface.co/lkeab/hq-sam/blob/main/sam_hq_vit_h.pth" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/sam_hq_vit_h.pth --content-disposition --show-progress
+    wget "https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_h.pth?download=true" -O /opt/stable-diffusion-webui/extensions/sd-webui-segment-anything/models/sam/sam_hq_vit_h.pth --content-disposition --show-progress
     rm -rf /opt/stable-diffusion-webui/ui-config.json
     wget "https://raw.githubusercontent.com/runningoec/sd-webui-conf/main/ui-config.json" -O /opt/stable-diffusion-webui/ui-config.json --content-disposition --show-progress
     mkdir -p "/opt/stable-diffusion-webui/embeddings"
